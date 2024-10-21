@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accident Emergency Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Accident Emergency Service</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#customer-login">Customer Login</a></li>
+                <li><a href="#driver-register">Driver Registration</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Accident Emergency Service</h2>
+            <p>In case of an emergency, please log in and use the emergency button below.</p>
+            <button id="emergency-btn" class="btn btn-emergency" disabled>Emergency</button>
+        </section>
+
+        <section id="customer-login">
+            <h2>Customer Login</h2>
+            <form id="login-form">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" required>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" required>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p>New user? <a href="#customer-register">Register here</a></p>
+        </section>
+
+        <section id="customer-register">
+            <h2>Customer Registration</h2>
+            <form id="register-form">
+                <label for="register-name">Full Name:</label>
+                <input type="text" id="register-name" required>
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" required>
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" required>
+                <label for="register-phone">Phone Number:</label>
+                <input type="tel" id="register-phone" required>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </section>
+
+        <section id="driver-register">
+            <h2>Driver Registration</h2>
+            <form id="driver-register-form">
+                <label for="driver-name">Full Name:</label>
+                <input type="text" id="driver-name" required>
+                <label for="driver-phone">Phone Number:</label>
+                <input type="tel" id="driver-phone" required>
+                <label for="driver-vehicle">Vehicle Number:</label>
+                <input type="text" id="driver-vehicle" required>
+                <label for="driver-license">License Number:</label>
+                <input type="text" id="driver-license" required>
+                <button type="submit" class="btn">Register as Driver</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Accident Emergency Service. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
