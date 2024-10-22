@@ -9,6 +9,15 @@ export default function AccidentEmergencyService() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [showRegistration, setShowRegistration] = useState(false)
   const [emergencyDisabled, setEmergencyDisabled] = useState(true)
+  const [showDriverDetails, setShowDriverDetails] = useState(false)
+
+  const driverDetails = {
+    name: 'John Doe',
+    vehicle: 'Toyota Camry - Blue',
+    licensePlate: 'ABC-1234',
+    contact: '+123456789',
+    estimatedArrival: '10 minutes'
+  }
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault()
@@ -27,6 +36,7 @@ export default function AccidentEmergencyService() {
 
   const handleEmergency = () => {
     alert('Emergency services have been notified. Help is on the way!')
+    setShowDriverDetails(true)
   }
 
   return (
@@ -103,6 +113,19 @@ export default function AccidentEmergencyService() {
           <section className="bg-white p-6 rounded-lg shadow-md mt-6">
             <h2 className="text-xl font-semibold mb-4">Welcome, User!</h2>
             <p>You are now logged in. The emergency button is enabled.</p>
+          </section>
+        )}
+
+        {showDriverDetails && (
+          <section className="bg-white p-6 rounded-lg shadow-md mt-6">
+            <h2 className="text-xl font-semibold mb-4">Driver Details</h2>
+            <ul className="space-y-2">
+              <li><strong>Name:</strong> {driverDetails.name}</li>
+              <li><strong>Vehicle:</strong> {driverDetails.vehicle}</li>
+              <li><strong>License Plate:</strong> {driverDetails.licensePlate}</li>
+              <li><strong>Contact:</strong> {driverDetails.contact}</li>
+              <li><strong>Estimated Arrival:</strong> {driverDetails.estimatedArrival}</li>
+            </ul>
           </section>
         )}
       </main>
